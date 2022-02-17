@@ -8,6 +8,8 @@ This driver is interrupt-driven and includes  the listed below functionality:
 
 ## Example of use (encoder is connected to pin 4 and 15)
 ~~~cpp
+#include "esp_encoder.h"
+
 void loop() {
   encoder enc(GPIO_NUM_4, GPIO_NUM_15);
 
