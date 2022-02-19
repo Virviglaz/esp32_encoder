@@ -108,6 +108,7 @@ encoder::encoder(gpio_num_t a, gpio_num_t b)
 	enc_a = a;
 	enc_b = b;
 
+	gpio_uninstall_isr_service();
 	ERR_RTN(gpio_install_isr_service(0));
 	ERR_RTN(gpio_config(enc_a));
 	ERR_RTN(gpio_config(enc_b));
